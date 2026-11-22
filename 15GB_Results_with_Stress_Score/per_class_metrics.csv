@@ -1,0 +1,7 @@
+model,class,precision,recall,f1,support
+LogisticRegression,Low,0.9334,0.9815,0.9568,1999
+LogisticRegression,Medium,0.9041,0.9132,0.9087,1890
+LogisticRegression,High,0.9866,0.9236,0.9541,1912
+RandomForest,Low,0.9336,0.9705,0.9517,1999
+RandomForest,Medium,0.8797,0.9095,0.8944,1890
+RandomForest,High,0.9813,0.9079,0.9432,1912

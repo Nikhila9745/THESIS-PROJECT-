@@ -1,0 +1,8 @@
+Metric,Value
+Dataset Size,5 GB
+Total Records,"19,500,000"
+Total Attributes,41
+Spark Version,4.2.0
+Balanced ML Samples,"29,944"
+Training Samples,"23,984"
+Testing Samples,"5,960"

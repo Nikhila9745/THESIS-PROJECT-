@@ -1,0 +1,18 @@
+{
+  "low_multiplier": 32.0,
+  "medium_multiplier": 2.0,
+  "validation_macro_f1": 0.6128102438310038,
+  "grid": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024
+  ]
+}

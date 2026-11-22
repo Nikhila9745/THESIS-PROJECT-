@@ -1,0 +1,8 @@
+Stress_Data_5GB.csv
+Stress_Data_10GB.csv
+Stress_Data_15GB.csv
+Stress_Data_20GB.csv
+.env
+__pycache__/
+.venv/
+.ipynb_checkpoints/

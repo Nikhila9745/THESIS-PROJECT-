@@ -1,0 +1,100 @@
+variant,model,true,predicted,count
+A_natural_sample,Logistic Regression,Low,Low,0
+A_natural_sample,Logistic Regression,Low,Medium,3184
+A_natural_sample,Logistic Regression,Low,High,6
+A_natural_sample,Logistic Regression,Medium,Low,0
+A_natural_sample,Logistic Regression,Medium,Medium,53231
+A_natural_sample,Logistic Regression,Medium,High,15284
+A_natural_sample,Logistic Regression,High,Low,0
+A_natural_sample,Logistic Regression,High,Medium,3484
+A_natural_sample,Logistic Regression,High,High,426055
+A_natural_sample,Random Forest,Low,Low,0
+A_natural_sample,Random Forest,Low,Medium,3187
+A_natural_sample,Random Forest,Low,High,3
+A_natural_sample,Random Forest,Medium,Low,0
+A_natural_sample,Random Forest,Medium,Medium,53144
+A_natural_sample,Random Forest,Medium,High,15371
+A_natural_sample,Random Forest,High,Low,0
+A_natural_sample,Random Forest,High,Medium,5903
+A_natural_sample,Random Forest,High,High,423636
+B_balanced_sample,Logistic Regression,Low,Low,3098
+B_balanced_sample,Logistic Regression,Low,Medium,92
+B_balanced_sample,Logistic Regression,Low,High,0
+B_balanced_sample,Logistic Regression,Medium,Low,5676
+B_balanced_sample,Logistic Regression,Medium,Medium,61612
+B_balanced_sample,Logistic Regression,Medium,High,1227
+B_balanced_sample,Logistic Regression,High,Low,0
+B_balanced_sample,Logistic Regression,High,Medium,37206
+B_balanced_sample,Logistic Regression,High,High,392333
+B_balanced_sample,Random Forest,Low,Low,3086
+B_balanced_sample,Random Forest,Low,Medium,104
+B_balanced_sample,Random Forest,Low,High,0
+B_balanced_sample,Random Forest,Medium,Low,5384
+B_balanced_sample,Random Forest,Medium,Medium,61787
+B_balanced_sample,Random Forest,Medium,High,1344
+B_balanced_sample,Random Forest,High,Low,0
+B_balanced_sample,Random Forest,High,Medium,40690
+B_balanced_sample,Random Forest,High,High,388849
+C_class_weighted,Logistic Regression (weighted),Low,Low,3095
+C_class_weighted,Logistic Regression (weighted),Low,Medium,95
+C_class_weighted,Logistic Regression (weighted),Low,High,0
+C_class_weighted,Logistic Regression (weighted),Medium,Low,5600
+C_class_weighted,Logistic Regression (weighted),Medium,Medium,61737
+C_class_weighted,Logistic Regression (weighted),Medium,High,1178
+C_class_weighted,Logistic Regression (weighted),High,Low,0
+C_class_weighted,Logistic Regression (weighted),High,Medium,36665
+C_class_weighted,Logistic Regression (weighted),High,High,392874
+D_oversampled,Logistic Regression,Low,Low,3103
+D_oversampled,Logistic Regression,Low,Medium,87
+D_oversampled,Logistic Regression,Low,High,0
+D_oversampled,Logistic Regression,Medium,Low,5677
+D_oversampled,Logistic Regression,Medium,Medium,61682
+D_oversampled,Logistic Regression,Medium,High,1156
+D_oversampled,Logistic Regression,High,Low,0
+D_oversampled,Logistic Regression,High,Medium,36830
+D_oversampled,Logistic Regression,High,High,392709
+D_oversampled,Random Forest,Low,Low,3081
+D_oversampled,Random Forest,Low,Medium,109
+D_oversampled,Random Forest,Low,High,0
+D_oversampled,Random Forest,Medium,Low,5523
+D_oversampled,Random Forest,Medium,Medium,61561
+D_oversampled,Random Forest,Medium,High,1431
+D_oversampled,Random Forest,High,Low,0
+D_oversampled,Random Forest,High,Medium,39737
+D_oversampled,Random Forest,High,High,389802
+E_undersampled,Logistic Regression,Low,Low,2706
+E_undersampled,Logistic Regression,Low,Medium,484
+E_undersampled,Logistic Regression,Low,High,0
+E_undersampled,Logistic Regression,Medium,Low,1585
+E_undersampled,Logistic Regression,Medium,Medium,65734
+E_undersampled,Logistic Regression,Medium,High,1196
+E_undersampled,Logistic Regression,High,Low,0
+E_undersampled,Logistic Regression,High,Medium,35080
+E_undersampled,Logistic Regression,High,High,394459
+E_undersampled,Random Forest,Low,Low,2728
+E_undersampled,Random Forest,Low,Medium,462
+E_undersampled,Random Forest,Low,High,0
+E_undersampled,Random Forest,Medium,Low,2099
+E_undersampled,Random Forest,Medium,Medium,65107
+E_undersampled,Random Forest,Medium,High,1309
+E_undersampled,Random Forest,High,Low,0
+E_undersampled,Random Forest,High,Medium,41004
+E_undersampled,Random Forest,High,High,388535
+F_balanced_bagging,Random Forest x5 (averaged),Low,Low,3083
+F_balanced_bagging,Random Forest x5 (averaged),Low,Medium,107
+F_balanced_bagging,Random Forest x5 (averaged),Low,High,0
+F_balanced_bagging,Random Forest x5 (averaged),Medium,Low,5336
+F_balanced_bagging,Random Forest x5 (averaged),Medium,Medium,61945
+F_balanced_bagging,Random Forest x5 (averaged),Medium,High,1234
+F_balanced_bagging,Random Forest x5 (averaged),High,Low,0
+F_balanced_bagging,Random Forest x5 (averaged),High,Medium,40290
+F_balanced_bagging,Random Forest x5 (averaged),High,High,389249
+G_threshold_tuned,"Logistic Regression (natural, tuned)",Low,Low,128
+G_threshold_tuned,"Logistic Regression (natural, tuned)",Low,Medium,3058
+G_threshold_tuned,"Logistic Regression (natural, tuned)",Low,High,4
+G_threshold_tuned,"Logistic Regression (natural, tuned)",Medium,Low,710
+G_threshold_tuned,"Logistic Regression (natural, tuned)",Medium,Medium,61965
+G_threshold_tuned,"Logistic Regression (natural, tuned)",Medium,High,5840
+G_threshold_tuned,"Logistic Regression (natural, tuned)",High,Low,141
+G_threshold_tuned,"Logistic Regression (natural, tuned)",High,Medium,12875
+G_threshold_tuned,"Logistic Regression (natural, tuned)",High,High,416523

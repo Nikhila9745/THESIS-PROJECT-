@@ -1,0 +1,7 @@
+check,tree_depth,accuracy
+Features without Stress_Score,2,0.8919426425401161
+Features without Stress_Score,5,0.9125981563673609
+Stress_Score only,2,0.9788323659952202
+Stress_Score only,5,0.9788323659952202
+Features including Stress_Score,2,0.9788323659952202
+Features including Stress_Score,5,0.9786616592693752

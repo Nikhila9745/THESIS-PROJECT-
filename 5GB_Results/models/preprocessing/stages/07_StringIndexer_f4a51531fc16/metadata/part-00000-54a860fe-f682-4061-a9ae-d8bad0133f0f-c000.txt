@@ -1,0 +1,1 @@
+{"class":"org.apache.spark.ml.feature.StringIndexerModel","timestamp":1792581542811,"sparkVersion":"4.2.0","uid":"StringIndexer_f4a51531fc16","paramMap":{"handleInvalid":"keep","inputCol":"Alcohol","outputCol":"Alcohol_idx"},"defaultParamMap":{"handleInvalid":"error","outputCol":"StringIndexer_f4a51531fc16__output","stringOrderType":"frequencyDesc"}}

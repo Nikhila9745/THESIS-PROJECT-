@@ -1,0 +1,15 @@
+Model,Actual_Label,Predicted_Label,Count
+Logistic Regression,2,2,1865
+Logistic Regression,1,1,2026
+Logistic Regression,0,0,1788
+Logistic Regression,0,2,170
+Logistic Regression,2,1,177
+Logistic Regression,1,2,28
+Logistic Regression,2,0,46
+Random Forest,1,2,72
+Random Forest,2,2,1888
+Random Forest,1,1,1982
+Random Forest,2,0,39
+Random Forest,0,0,1783
+Random Forest,0,2,175
+Random Forest,2,1,161

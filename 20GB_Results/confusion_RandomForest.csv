@@ -1,0 +1,8 @@
+label,prediction,count,true_class,predicted_class
+1.0,2.0,34,Medium,High
+1.0,1.0,1798,Medium,Medium
+2.0,2.0,1748,High,High
+1.0,0.0,142,Medium,Low
+0.0,1.0,53,Low,Medium
+2.0,1.0,170,High,Medium
+0.0,0.0,1867,Low,Low

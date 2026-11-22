@@ -1,0 +1,29 @@
+model_a,model_b,a_right_b_wrong,a_wrong_b_right,chi2,p_value
+Logistic Regression,Random Forest,149,126,1.76,0.18462451562339963
+Logistic Regression,Decision Tree,290,165,33.793,6.128622221477224e-09
+Logistic Regression,Gradient Boosted Trees (one-vs-rest),185,167,0.821,0.36488131404191815
+Logistic Regression,Multilayer Perceptron,107,90,1.299,0.25430596599062316
+Logistic Regression,Naive Bayes,200,85,45.6,1.450415804773112e-11
+Logistic Regression,Linear SVM (one-vs-rest),795,172,400.087,5.272600802609725e-89
+Logistic Regression,Ordinal regression (rounded),178,101,20.703,5.364566455290843e-06
+Random Forest,Decision Tree,206,104,32.906,9.670181660265089e-09
+Random Forest,Gradient Boosted Trees (one-vs-rest),103,108,0.076,0.7830309480468379
+Random Forest,Multilayer Perceptron,169,175,0.073,0.787481901270726
+Random Forest,Naive Bayes,249,157,20.397,6.294310995146394e-06
+Random Forest,Linear SVM (one-vs-rest),803,203,356.661,1.501908715749269e-79
+Random Forest,Ordinal regression (rounded),191,137,8.564,0.003428706602518388
+Decision Tree,Gradient Boosted Trees (one-vs-rest),87,194,39.986,2.558203607393031e-10
+Decision Tree,Multilayer Perceptron,191,299,23.365,1.3397319460555454e-06
+Decision Tree,Naive Bayes,281,291,0.142,0.7066872601821499
+Decision Tree,Linear SVM (one-vs-rest),786,288,229.99,5.992060825731235e-52
+Decision Tree,Ordinal regression (rounded),211,259,4.7,0.03016261739850888
+Gradient Boosted Trees (one-vs-rest),Multilayer Perceptron,198,199,0.0,1.0
+Gradient Boosted Trees (one-vs-rest),Naive Bayes,303,206,18.106,2.089320830584661e-05
+Gradient Boosted Trees (one-vs-rest),Linear SVM (one-vs-rest),791,186,373.404,3.3961101125624256e-83
+Gradient Boosted Trees (one-vs-rest),Ordinal regression (rounded),236,177,8.145,0.004317342531483462
+Multilayer Perceptron,Naive Bayes,223,125,27.037,1.99561268070276e-07
+Multilayer Perceptron,Linear SVM (one-vs-rest),832,226,345.959,3.214113561251468e-77
+Multilayer Perceptron,Ordinal regression (rounded),161,101,13.286,0.0002673583526914306
+Naive Bayes,Linear SVM (one-vs-rest),776,268,246.216,1.735864352949733e-55
+Naive Bayes,Ordinal regression (rounded),163,201,3.761,0.052461539544334496
+Linear SVM (one-vs-rest),Ordinal regression (rounded),334,880,244.666,3.778014675812468e-55

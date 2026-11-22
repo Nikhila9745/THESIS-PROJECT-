@@ -1,0 +1,9 @@
+train_share,train_records,model,accuracy
+0.1,2371,Logistic Regression,0.9223300970873787
+0.1,2371,Random Forest,0.9211377959461762
+0.25,6098,Logistic Regression,0.9269289729177312
+0.25,6098,Random Forest,0.9231817407596662
+0.5,12171,Logistic Regression,0.9282916027933913
+0.5,12171,Random Forest,0.9230114120252086
+1.0,24105,Logistic Regression,0.9286322602623063
+1.0,24105,Random Forest,0.9247146993697837

@@ -1,0 +1,77 @@
+{
+  "csv": "/mnt/c/Users/JP/THESIS PROJECT/Stress_Data_15GB.csv",
+  "started": "2026-10-21T09:33:13",
+  "rows_after_cleaning": 58100000,
+  "label_counts_before_balancing": {
+    "Medium": 7908163,
+    "Low": 370989,
+    "High": 49820848
+  },
+  "numeric_columns": [
+    "Age",
+    "Study_Hours",
+    "Working_Hours",
+    "Academic_Workload",
+    "Exam_Pressure",
+    "Assignment_Pressure",
+    "Attendance_Percentage",
+    "Sleep_Hours",
+    "Screen_Time_Hours",
+    "Social_Media_Hours",
+    "Exercise_Minutes",
+    "Water_Intake_Liters",
+    "Financial_Stress",
+    "Family_Stress",
+    "Relationship_Stress",
+    "Social_Support",
+    "Anxiety_Level",
+    "Mood_Score",
+    "Heart_Rate",
+    "Systolic_BP",
+    "Diastolic_BP",
+    "HRV",
+    "Respiration_Rate",
+    "Body_Temperature",
+    "BMI",
+    "Noise_Level",
+    "Air_Quality_Index"
+  ],
+  "categorical_columns": [
+    "Gender",
+    "Education",
+    "Occupation",
+    "Marital_Status",
+    "Diet_Quality",
+    "Smoking",
+    "Alcohol",
+    "Weather",
+    "Activity",
+    "Comment"
+  ],
+  "dropped_text_columns": [
+    "Timestamp"
+  ],
+  "test_rows_also_in_train": 0,
+  "train_rows": 23829,
+  "test_rows": 5801,
+  "metrics": [
+    {
+      "model": "LogisticRegression",
+      "accuracy": 0.9401827271160145,
+      "weighted_f1": 0.9402325961647097,
+      "weighted_precision": 0.9413973024414468,
+      "weighted_recall": 0.9401827271160146,
+      "train_seconds": 6.3
+    },
+    {
+      "model": "RandomForest",
+      "accuracy": 0.9300120668850198,
+      "weighted_f1": 0.9302238951834667,
+      "weighted_precision": 0.93178345348588,
+      "weighted_recall": 0.9300120668850198,
+      "train_seconds": 4.36
+    }
+  ],
+  "total_seconds": 385.2,
+  "finished": "2026-10-21T09:39:38"
+}

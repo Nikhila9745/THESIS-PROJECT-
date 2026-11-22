@@ -1,0 +1,8 @@
+codes 
+
+1. source ~/sparkenv/bin/activate
+cd "/mnt/c/Users/JP/THESIS PROJECT"
+cd "/mnt/c/Users/JP/THESIS PROJECT/website"
+python3 -m http.server 8000 
+
+then chrome - student stress

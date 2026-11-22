@@ -1,0 +1,5 @@
+requested_cores,cores_used,random_forest_fit_seconds,total_seconds_including_load
+1,1,16.9,398.34
+2,2,9.44,200.56
+4,4,6.3,121.64
+all,16,4.78,73.28

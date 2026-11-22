@@ -1,0 +1,15 @@
+removed_group,model,accuracy,drop
+none (full model),Logistic Regression,0.9337931034482758,0.0
+none (full model),Random Forest,0.93,0.0
+physiological,Logistic Regression,0.9086206896551724,0.02517241379310342
+physiological,Random Forest,0.8539655172413793,0.07603448275862079
+mental_and_social,Logistic Regression,0.9063793103448275,0.02741379310344827
+mental_and_social,Random Forest,0.9236206896551724,0.006379310344827638
+academic_workload,Logistic Regression,0.9132758620689655,0.020517241379310325
+academic_workload,Random Forest,0.925,0.0050000000000000044
+lifestyle,Logistic Regression,0.9313793103448276,0.0024137931034482474
+lifestyle,Random Forest,0.9317241379310345,-0.0017241379310344307
+environment,Logistic Regression,0.9346551724137931,-0.0008620689655173264
+environment,Random Forest,0.9325862068965517,-0.002586206896551646
+categorical,Logistic Regression,0.9339655172413793,-0.00017241379310350968
+categorical,Random Forest,0.9281034482758621,0.0018965517241379404

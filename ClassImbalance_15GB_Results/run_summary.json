@@ -1,0 +1,31 @@
+{
+  "csv": "/mnt/c/Users/JP/THESIS PROJECT/Stress_Data_15GB.csv",
+  "natural_train_counts": {
+    "Low": 296710,
+    "Medium": 6325971,
+    "High": 39853254
+  },
+  "test_records_scored": 501244,
+  "validation_records_used": 300670,
+  "natural_training_records": 998568,
+  "class_weights": {
+    "Low": 52.21252513677777,
+    "Medium": 2.448948680500327,
+    "High": 0.38872555634562067
+  },
+  "args": {
+    "csv": "/mnt/c/Users/JP/THESIS PROJECT/Stress_Data_15GB.csv",
+    "out": "/mnt/c/Users/JP/THESIS PROJECT/ClassImbalance_15GB_Results",
+    "driver_memory": "6g",
+    "test_fraction": 0.1,
+    "val_fraction": 0.1,
+    "test_cap": 500000,
+    "val_cap": 300000,
+    "natural_cap": 1000000,
+    "per_class": 10000,
+    "cap": 100000,
+    "ratio": 3.0,
+    "bags": 5,
+    "bag_per_class": 10000
+  }
+}

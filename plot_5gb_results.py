@@ -1,0 +1,116 @@
+# plot_5GB_results.py
+# Draws the figures for the 5GB run from the results folder written by stress_5GB_spark_ml.py.
+# Run from the Ubuntu terminal:  python3 plot_5GB_results.py
+
+import os
+import pandas as pd
+import numpy as np
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+
+RESULTS_DIR = "/mnt/c/Users/JP/THESIS PROJECT/5GB_Results"
+PLOT_DIR = os.path.join(RESULTS_DIR, "plots")
+LABEL_NAMES = {0.0: "Low", 1.0: "Medium", 2.0: "High"}
+CLASS_ORDER = ["Low", "Medium", "High"]
+MODEL_NAMES = {"LogisticRegression": "Logistic Regression", "RandomForest": "Random Forest"}
+TITLE_SIZE = 13
+
+os.makedirs(PLOT_DIR, exist_ok=True)
+
+
+def load(name):
+    path = os.path.join(RESULTS_DIR, name)
+    if not os.path.exists(path):
+        print(f"Missing file, skipping: {name}")
+        return None
+    return pd.read_csv(path)
+
+
+def save(fig, name):
+    path = os.path.join(PLOT_DIR, name)
+    fig.tight_layout()
+    fig.savefig(path, dpi=200)
+    plt.close(fig)
+    print("Saved", path)
+
+
+# 1. Model comparison on the balanced test set
+metrics = load("metrics_summary.csv")
+if metrics is not None:
+    cols = [("accuracy", "Accuracy"), ("weighted_f1", "Weighted F1"),
+            ("weighted_precision", "Weighted precision"), ("weighted_recall", "Weighted recall")]
+    x = np.arange(len(cols))
+    width = 0.38
+    fig, ax = plt.subplots(figsize=(8, 4.5))
+    for i, (_, row) in enumerate(metrics.iterrows()):
+        values = [row[c] for c, _ in cols]
+        bars = ax.bar(x + (i - 0.5) * width, values, width,
+                      label=MODEL_NAMES.get(row["model"], row["model"]))
+        ax.bar_label(bars, fmt="%.3f", fontsize=8, padding=2)
+    ax.set_xticks(x)
+    ax.set_xticklabels([label for _, label in cols])
+    ax.set_ylim(0.85, 1.05)
+    ax.set_ylabel("Score")
+    ax.set_title("5GB run: model comparison on the balanced test set", fontsize=TITLE_SIZE)
+    ax.legend(loc="upper center", ncol=2, frameon=False)
+    ax.grid(axis="y", alpha=0.3)
+    save(fig, "5GB_model_comparison.png")
+
+# 2. Per-class F1 for each model
+per_class = load("per_class_metrics.csv")
+if per_class is not None:
+    fig, ax = plt.subplots(figsize=(7, 4.5))
+    x = np.arange(len(CLASS_ORDER))
+    width = 0.38
+    models = list(per_class["model"].unique())
+    for i, model in enumerate(models):
+        sub = per_class[per_class["model"] == model].set_index("class").reindex(CLASS_ORDER)
+        bars = ax.bar(x + (i - (len(models) - 1) / 2) * width, sub["f1"], width,
+                      label=MODEL_NAMES.get(model, model))
+        ax.bar_label(bars, fmt="%.3f", fontsize=8, padding=2)
+    ax.set_xticks(x)
+    ax.set_xticklabels(CLASS_ORDER)
+    ax.set_ylim(0.8, 1.05)
+    ax.set_ylabel("F1 score")
+    ax.set_title("5GB run: per-class F1 on the balanced test set", fontsize=TITLE_SIZE)
+    ax.legend(loc="upper center", ncol=2, frameon=False)
+    ax.grid(axis="y", alpha=0.3)
+    save(fig, "5GB_per_class_f1.png")
+
+# 3. Confusion matrices (rows = true class, columns = predicted class)
+for model in ["LogisticRegression", "RandomForest"]:
+    cm = load(f"confusion_{model}.csv")
+    if cm is None:
+        continue
+    matrix = (cm.pivot_table(index="label", columns="prediction", values="count", fill_value=0)
+                .reindex(index=[0.0, 1.0, 2.0], columns=[0.0, 1.0, 2.0], fill_value=0))
+    fig, ax = plt.subplots(figsize=(5.5, 4.8))
+    im = ax.imshow(matrix.values, cmap="Blues")
+    ax.set_xticks(range(3))
+    ax.set_yticks(range(3))
+    ax.set_xticklabels(CLASS_ORDER)
+    ax.set_yticklabels(CLASS_ORDER)
+    ax.set_xlabel("Predicted class")
+    ax.set_ylabel("True class")
+    for r in range(3):
+        for c in range(3):
+            value = int(matrix.values[r, c])
+            color = "white" if matrix.values[r, c] > matrix.values.max() / 2 else "black"
+            ax.text(c, r, f"{value:,}", ha="center", va="center", color=color)
+    ax.set_title(f"5GB run: confusion matrix, {MODEL_NAMES.get(model, model)}", fontsize=TITLE_SIZE)
+    fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
+    save(fig, f"5GB_confusion_{model}.png")
+
+# 4. Top 15 Random Forest feature importances
+fi = load("feature_importance_random_forest.csv")
+if fi is not None:
+    top = fi.head(15).iloc[::-1]
+    fig, ax = plt.subplots(figsize=(7, 5.5))
+    ax.barh(top["feature"], top["importance"], color="#3B6EA8")
+    ax.set_xlabel("Importance (Random Forest)")
+    ax.set_title("5GB run: top 15 features", fontsize=TITLE_SIZE)
+    ax.grid(axis="x", alpha=0.3)
+    save(fig, "5GB_feature_importance_top15.png")
+
+print("Done. Figures are in:", PLOT_DIR)
